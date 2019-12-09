@@ -1,0 +1,25 @@
+server:
+  port: 8761
+security:
+  basic:
+    enabled: true
+  user:
+    name: xwx
+    password: xwx2019
+spring:
+  application:
+    name: eureka
+
+eureka:
+  instance:
+    #eureka服务端的实例名称
+    hostname: node1
+  client:
+    # false表示不向注册中心注册自己
+    registerWithEureka: true
+    # false表示自己端就是注册中心，只做维护服务实例，并不需要去检索服务
+    fetchRegistry: false
+  server:
+    #关闭自我保护模式（缺省为打开）
+    enable-self-preservation:false
+spring.cloud.config.discovery.enabled: true

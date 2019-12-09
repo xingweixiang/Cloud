@@ -1,0 +1,19 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: eureka3
+
+eureka:
+  instance:
+    hostname: node3
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://node1:8761/eureka/,http://node2:8762/eureka/
+  server:
+    #关闭自我保护模式（缺省为打开）
+    enable-self-preservation:false
+spring.cloud.config.discovery.enabled: true

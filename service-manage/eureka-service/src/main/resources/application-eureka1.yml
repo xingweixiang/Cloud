@@ -1,0 +1,25 @@
+#分别启动eureka客户端，启动参数分别是 --spring.profiles.active=eureka1、--spring.profiles.active=eureka2、--spring.profiles.active=eureka3
+#访问 http://localhost:8761 ,在node1的页面上可以看到，General Info的available-replicas有node2和node3节点，说明3个节点的eureka server相互注册成功。
+#如果available-replicas是空的，而unavailable-replicas有其他两个节点，说明配置有问题，集群搭建失败。
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka1
+
+eureka:
+  instance:
+    #eureka服务端的实例名称
+    hostname: node1
+  client:
+    # false表示不向注册中心注册自己
+    registerWithEureka: true
+    # false表示自己端就是注册中心，只做维护服务实例，并不需要去检索服务
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://node2:8762/eureka/,http://node3:8763/eureka/
+  server:
+    #关闭自我保护模式（缺省为打开）
+    enable-self-preservation:false
+spring.cloud.config.discovery.enabled: true
