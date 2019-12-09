@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cloudnative</artifactId>
+        <groupId>com.cloudnative</groupId>
+        <version>2.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <!-- 认证服务器配置 -->
+        <module>security-service</module>
+        <!-- 日志统一配置 -->
+        <module>log-service</module>
+        <!-- 关系型数据库配置-->
+        <module>db-service</module>
+        <!-- 公共配置 -->
+        <module>base-support</module>
+        <!-- 非关系型数据库配置-->
+        <module>redis-service</module>
+        <module>api-swagger</module>
+    </modules>
+
+
+</project>
