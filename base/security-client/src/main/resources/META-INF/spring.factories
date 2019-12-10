@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.cloudnative.base.securityClient.authorize.provider.AuthAuthorizeConfigProvider,\
+com.cloudnative.base.securityClient.authorize.OpenAuthorizeConfigManager,\
+com.cloudnative.base.securityClient.config.ExceptionHandlerAdvice,\
+com.cloudnative.base.support.feign.FeignInterceptorConfig,\
+com.cloudnative.base.securityClient.config.SecurityHandlerConfig,\
+com.cloudnative.base.securityClient.config.TokenStoreConfig,\
+com.cloudnative.base.securityClient.UAAClientAutoConfig

@@ -12,6 +12,9 @@
         <module>service-manage</module>
         <module>base</module>
         <module>security</module>
+        <module>modules</module>
+        <module>gateway</module>
+        <module>web</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -122,10 +125,16 @@
                 <version>${core.version}</version>
             </dependency>
 
-            <!-- 资源服务 -->
+            <!-- 认证服务 -->
             <dependency>
                 <groupId>com.cloudnative</groupId>
                 <artifactId>security-service</artifactId>
+                <version>${core.version}</version>
+            </dependency>
+            <!-- 资源服务 -->
+            <dependency>
+                <groupId>com.cloudnative</groupId>
+                <artifactId>security-client</artifactId>
                 <version>${core.version}</version>
             </dependency>
             <!-- API测试文档 -->

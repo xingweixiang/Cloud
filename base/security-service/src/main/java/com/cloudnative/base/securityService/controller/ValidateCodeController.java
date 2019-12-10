@@ -15,8 +15,6 @@ import java.awt.image.BufferedImage;
 
 /**
  * 验证码提供
- * @author zlt
- * @date 2018/12/18
  */
 @Controller
 public class ValidateCodeController {
@@ -32,7 +30,7 @@ public class ValidateCodeController {
      * @throws Exception
      */
     @GetMapping("/validata/code/{deviceId}")
-    @LogAnnotation(module="auth-server",recordRequestParam=false)
+    @LogAnnotation(module="oauth",recordRequestParam=false)
     public void createCode(@PathVariable String deviceId, HttpServletResponse response) throws Exception {
         Assert.notNull(deviceId, "机器码不能为空");
         response.setHeader("Cache-Control", "no-store, no-cache");

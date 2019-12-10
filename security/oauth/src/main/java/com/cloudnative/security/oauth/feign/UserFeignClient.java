@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 * 调用用户中心中的userdetail对象，用户oauth中的登录
 * 获取的用户与页面输入的密码 进行BCryptPasswordEncoder匹配
  */
-@FeignClient(value="user-center",configuration = FeignExceptionConfig.class)
+@FeignClient(value="sys",configuration = FeignExceptionConfig.class)
 public interface UserFeignClient {
 
 	/**

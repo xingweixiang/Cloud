@@ -23,6 +23,8 @@
         <!-- 非关系型数据库配置-->
         <module>redis-service</module>
         <module>api-swagger</module>
+        <!-- 资源服务器配置 -->
+        <module>security-client</module>
     </modules>
 
 

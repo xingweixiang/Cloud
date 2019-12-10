@@ -119,7 +119,7 @@ public class ShardingDataSourceConfig {
 		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
 		bean.setDataSource(dataSource);
 		bean.setMapperLocations(
-				new PathMatchingResourcePatternResolver().getResources("classpath*:com/central/**/dao/*.xml"));
+				new PathMatchingResourcePatternResolver().getResources("classpath*:com/cloudnative/**/dao/*.xml"));
 		return bean.getObject();
 	}
 
